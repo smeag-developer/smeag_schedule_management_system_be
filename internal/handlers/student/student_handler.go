@@ -6,11 +6,11 @@ import (
 	"strconv"
 	"time"
 
-	cc "nxt_match_event_manager_api/internal/constants"
-	common "nxt_match_event_manager_api/internal/models/common"
-	models "nxt_match_event_manager_api/internal/models/student"
-	"nxt_match_event_manager_api/internal/utils"
-	loggers "nxt_match_event_manager_api/internal/utils/loggers"
+	cc "smeag_sms_be/internal/constants"
+	common "smeag_sms_be/internal/models/common"
+	models "smeag_sms_be/internal/models/student"
+	"smeag_sms_be/internal/utils"
+	loggers "smeag_sms_be/internal/utils/loggers"
 
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/v2/bson"

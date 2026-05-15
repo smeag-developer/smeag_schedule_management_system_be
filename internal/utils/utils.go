@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	common "nxt_match_event_manager_api/internal/models/common"
+	common "smeag_sms_be/internal/models/common"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"

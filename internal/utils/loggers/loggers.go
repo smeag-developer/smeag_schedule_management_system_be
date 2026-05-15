@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"log/slog"
 	"net/http"
-	cc "nxt_match_event_manager_api/internal/constants"
-	common "nxt_match_event_manager_api/internal/models/common"
-	"nxt_match_event_manager_api/internal/utils"
+	cc "smeag_sms_be/internal/constants"
+	common "smeag_sms_be/internal/models/common"
+	"smeag_sms_be/internal/utils"
 	"time"
 
 	"github.com/gin-gonic/gin"

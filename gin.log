@@ -4,7 +4,7 @@
  - using env:	export GIN_MODE=release
  - using code:	gin.SetMode(gin.ReleaseMode)
 
-[GIN-debug] POST   /api/v1/student           --> nxt_match_event_manager_api/internal/handlers/student.(*NewStudentHandler).handleCreateStudent-fm (5 handlers)
-[GIN-debug] PUT    /api/v1/student/:id       --> nxt_match_event_manager_api/internal/handlers/student.(*NewStudentHandler).handleUpdateStudent-fm (5 handlers)
-[GIN-debug] DELETE /api/v1/student/:id       --> nxt_match_event_manager_api/internal/handlers/student.(*NewStudentHandler).handleDeleteStudent-fm (5 handlers)
-[GIN-debug] GET    /api/v1/students          --> nxt_match_event_manager_api/internal/handlers/student.(*NewStudentHandler).handleGetStudents-fm (5 handlers)
+[GIN-debug] POST   /api/v1/student/create    --> smeag_sms_be/internal/handlers/student.(*NewStudentHandler).handleCreateStudent-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/student/update/:id --> smeag_sms_be/internal/handlers/student.(*NewStudentHandler).handleUpdateStudent-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/student/delete/:id --> smeag_sms_be/internal/handlers/student.(*NewStudentHandler).handleDeleteStudent-fm (5 handlers)
+[GIN-debug] GET    /api/v1/students/all      --> smeag_sms_be/internal/handlers/student.(*NewStudentHandler).handleGetStudents-fm (5 handlers)

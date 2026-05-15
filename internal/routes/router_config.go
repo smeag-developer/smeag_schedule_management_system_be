@@ -3,7 +3,7 @@ package router
 import (
 	"strings"
 
-	logger "nxt_match_event_manager_api/internal/utils/loggers"
+	logger "smeag_sms_be/internal/utils/loggers"
 
 	"github.com/gin-gonic/gin"
 )

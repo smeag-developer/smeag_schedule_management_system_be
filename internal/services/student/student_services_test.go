@@ -11,8 +11,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/v2/bson"
 
-	models "nxt_match_event_manager_api/internal/models/student"
-	services "nxt_match_event_manager_api/internal/services/student"
+	models "smeag_sms_be/internal/models/student"
+	services "smeag_sms_be/internal/services/student"
 )
 
 // mockStudentRepo is a manual mock that satisfies StudentRepositoryInterface.

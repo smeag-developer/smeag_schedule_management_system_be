@@ -2,7 +2,7 @@ package config
 
 import (
 	"errors"
-	models "nxt_match_event_manager_api/internal/models/config"
+	models "smeag_sms_be/internal/models/config"
 )
 
 /**

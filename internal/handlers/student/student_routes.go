@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"nxt_match_event_manager_api/internal/interfaces"
+	"smeag_sms_be/internal/interfaces"
 
 	"github.com/gin-gonic/gin"
 )
@@ -15,8 +15,8 @@ func NewStudentHandlerInit(svc interfaces.StudentServiceInterface) *NewStudentHa
 }
 
 func (h *NewStudentHandler) RegisterRoutes(router *gin.RouterGroup) {
-	router.POST("/student", h.handleCreateStudent)
-	router.PUT("/student/:id", h.handleUpdateStudent)
-	router.DELETE("/student/:id", h.handleDeleteStudent)
-	router.GET("/students", h.handleGetStudents)
+	router.POST("/student/create", h.handleCreateStudent)
+	router.PUT("/student/update/:id", h.handleUpdateStudent)
+	router.DELETE("/student/delete/:id", h.handleDeleteStudent)
+	router.GET("/students/all", h.handleGetStudents)
 }

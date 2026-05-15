@@ -3,8 +3,8 @@ package repository
 import (
 	"time"
 
-	models "nxt_match_event_manager_api/internal/models/student"
-	"nxt_match_event_manager_api/internal/utils"
+	models "smeag_sms_be/internal/models/student"
+	"smeag_sms_be/internal/utils"
 
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/v2/bson"

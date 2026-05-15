@@ -1,8 +1,8 @@
 package services
 
 import (
-	"nxt_match_event_manager_api/internal/interfaces"
-	models "nxt_match_event_manager_api/internal/models/student"
+	"smeag_sms_be/internal/interfaces"
+	models "smeag_sms_be/internal/models/student"
 
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/v2/bson"
