@@ -1,4 +1,4 @@
-module nxt_match_event_manager_api
+module smeag_sms_be
 
 go 1.23.4
 

@@ -4,10 +4,10 @@ import (
 	"context"
 	"log"
 	"log/slog"
-	conf "nxt_match_event_manager_api/config"
-	cc "nxt_match_event_manager_api/internal/constants"
-	"nxt_match_event_manager_api/pkg/database"
-	"nxt_match_event_manager_api/pkg/schema"
+	conf "smeag_sms_be/config"
+	cc "smeag_sms_be/internal/constants"
+	"smeag_sms_be/pkg/database"
+	"smeag_sms_be/pkg/schema"
 )
 
 var BuildEnv string

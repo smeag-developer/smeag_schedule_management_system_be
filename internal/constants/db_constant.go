@@ -2,12 +2,11 @@ package cc
 
 /*DB Collection*/
 const (
-	DB_NAME             = "nxt_match_event_db"
-	NOTIFICATIONS       = "notifications"
-	NOTIFICATION_TOKENS = "notification_tokens"
-	MATCH_NOTIFICATIONS = "match_notifications"
-	EVENT_NOTIFICATIONS = "event_notifications"
-	NEWS_NOTIFICATIONS  = "news_notifications"
+	DB_NAME            = "smeag_sms_db"
+	USER_COLLECTION    = "user"
+	TEACHER_COLLECTION = "teacher"
+	STUDENT_COLLECTION = "student"
+	REPORT_COLLECTION  = "reports"
 
 	// DB Errors
 	UNABLE_TO_FIND_NOTIF_TOKENS = "[mongo_db] unable to find token(s)"

@@ -1,8 +1,11 @@
 package core
 
 import (
-	models "nxt_match_event_manager_api/internal/models/config"
-	router "nxt_match_event_manager_api/internal/routes"
+	studentHandler "smeag_sms_be/internal/handlers/student"
+	models "smeag_sms_be/internal/models/config"
+	studentRepository "smeag_sms_be/internal/repositories/student"
+	router "smeag_sms_be/internal/routes"
+	studentService "smeag_sms_be/internal/services/student"
 
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/v2/mongo"
@@ -31,10 +34,12 @@ func (s *APISserver) Run() {
 	routes := router.NewRouterConfig(s.server, s.hostConf.AllowedOrigins)
 	routes.InitConfig()
 
-	//Routes
-	// notifHandler.RegisterRoutes(routes.RoutesGroup())
+	// Student routes
+	studentRepo := studentRepository.NewStudentRepository(s.clientDB)
+	studentSvc := studentService.NewStudentService(studentRepo)
+	studentHandler.NewStudentHandlerInit(studentSvc).RegisterRoutes(routes.RoutesGroup())
 
-	// Create multiplexing server
-	NewServerGrpcInstance(s.hostConf, s.server, s.clientDB).EstablishedServer()
+	// Serve server
+	NewServerInstance(s.hostConf, s.server, s.clientDB).EstablishedServer()
 
 }

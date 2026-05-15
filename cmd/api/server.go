@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 	"net/http"
-	models "nxt_match_event_manager_api/internal/models/config"
+	models "smeag_sms_be/internal/models/config"
 	"strconv"
 
 	"github.com/gin-gonic/gin"
@@ -13,21 +13,21 @@ import (
 	"go.mongodb.org/mongo-driver/v2/mongo"
 )
 
-type Server struct {
+type ServerInstance struct {
 	host     *models.HostConfig
 	router   *gin.Engine
 	clientDb mongo.Database
 }
 
-func NewServerGrpcInstance(h *models.HostConfig, r *gin.Engine, cdb *mongo.Database) *Server {
-	return &Server{
+func NewServerInstance(h *models.HostConfig, r *gin.Engine, cdb *mongo.Database) *ServerInstance {
+	return &ServerInstance{
 		host:     h,
 		router:   r,
 		clientDb: *cdb,
 	}
 }
 
-func (s *Server) EstablishedServer() {
+func (s *ServerInstance) EstablishedServer() {
 
 	// convert port
 	port, err := strconv.Atoi(s.host.Port)

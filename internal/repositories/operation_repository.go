@@ -11,16 +11,19 @@ import (
 	"go.mongodb.org/mongo-driver/v2/mongo/options"
 )
 
-type NotificationRepository struct {
-	NotificationsCol     *mongo.Collection
-	NotificationTokenCol *mongo.Collection
-	MatchNotificationCol *mongo.Collection
+type OperationRepository struct {
+	StudentCol *mongo.Collection
+	ReportCol  *mongo.Collection
+	TecherCol  *mongo.Collection
+	UserCol    *mongo.Collection
 }
 
-func NewNotificationRepository(db *mongo.Database) *NotificationRepository {
-	return &NotificationRepository{
-		NotificationsCol:     db.Collection(cc.NOTIFICATIONS),
-		NotificationTokenCol: db.Collection(cc.NOTIFICATION_TOKENS),
+func NewStudentRepository(db *mongo.Database) *OperationRepository {
+	return &OperationRepository{
+		StudentCol: db.Collection(cc.STUDENT_COLLECTION),
+		TecherCol:  db.Collection(cc.TEACHER_COLLECTION),
+		UserCol:    db.Collection(cc.USER_COLLECTION),
+		ReportCol:  db.Collection(cc.REPORT_COLLECTION),
 	}
 }
 

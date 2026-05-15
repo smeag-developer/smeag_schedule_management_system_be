@@ -18,8 +18,10 @@ type SchemaBuilder struct {
 func NewSchemaBuilder() *SchemaBuilder {
 	return &SchemaBuilder{
 		collections: slices.Compact([]string{ // avoid duplicate collection names
-			cc.NOTIFICATIONS,
-			cc.MATCH_NOTIFICATIONS,
+			cc.TEACHER_COLLECTION,
+			cc.USER_COLLECTION,
+			cc.REPORT_COLLECTION,
+			cc.STUDENT_COLLECTION,
 		}),
 	}
 }
