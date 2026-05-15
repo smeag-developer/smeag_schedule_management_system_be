@@ -8,3 +8,11 @@
 [GIN-debug] PUT    /api/v1/student/update/:id --> smeag_sms_be/internal/handlers/student.(*NewStudentHandler).handleUpdateStudent-fm (5 handlers)
 [GIN-debug] DELETE /api/v1/student/delete/:id --> smeag_sms_be/internal/handlers/student.(*NewStudentHandler).handleDeleteStudent-fm (5 handlers)
 [GIN-debug] GET    /api/v1/students/all      --> smeag_sms_be/internal/handlers/student.(*NewStudentHandler).handleGetStudents-fm (5 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2026/05/15 - 16:57:33 |[97;42m 200 [0m|     20.4063ms |             ::1 |[97;46m POST    [0m "/api/v1/student/create"
+[GIN] 2026/05/15 - 16:58:00 |[97;42m 200 [0m|       952.1µs |             ::1 |[97;46m POST    [0m "/api/v1/student/create"
+[GIN] 2026/05/15 - 17:00:06 |[97;42m 200 [0m|      2.6985ms |             ::1 |[97;46m POST    [0m "/api/v1/student/create"
+[GIN] 2026/05/15 - 17:01:25 |[97;42m 200 [0m|       507.7µs |             ::1 |[97;46m POST    [0m "/api/v1/student/create"
+[GIN] 2026/05/15 - 17:01:26 |[97;42m 200 [0m|       569.5µs |             ::1 |[97;46m POST    [0m "/api/v1/student/create"
