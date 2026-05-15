@@ -1,0 +1,28 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go build command
+bin/
+
+# Code coverage profiles and other test artifacts
+*.out
+*.coverprofile
+profile.cov
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Dependency directories (only if you choose not to use the 'vendor' directory)
+# vendor/
+
+# Environment files (secrets)
+.env
+/bin

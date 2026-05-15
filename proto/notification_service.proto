@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package notification;
+
+option go_package ="buff/";
+import "event_notification_message.proto";
+import "group_notification_message.proto";
+
+message CreateGroupJoinRequest{ 
+    GroupJoinNotificationRequest group_info_request = 1;
+}
+
+message CreateGroupJoinResponse{
+    bool is_group_created = 1;
+}
+
+message CreateEventJoinRequest {
+    EventJoinNotificationRequest event_info_request = 1;
+}
+
+message CreateEventJoinResponse {
+    bool is_event_created = 1;
+}
+
+message EventStatusRequest {
+    EventNotificationStatusRequest event_notif_status_request = 1;
+}
+
+message EventStatusResponse {
+    EventNotificationStatusResponse event_notif_status_response = 1;
+}
+
+message GroupStatusRequest {
+    GroupNotificationStatusRequest group_notif_status_request = 1;
+}
+
+message GroupStatusResponse {
+    GroupNotificationStatusResponse group_notif_status_response = 1;
+}
+
+
+service GroupNotificationService{
+    rpc RequestJoinGroupService(CreateGroupJoinRequest) returns (CreateGroupJoinResponse){};
+    rpc RequestUpdateGroupJoinStatus (GroupStatusRequest) returns (GroupStatusResponse){};
+}
+
+service EventNotificationService{
+    rpc RequestCreateEventService(CreateEventJoinRequest) returns (CreateEventJoinResponse){};
+    rpc RequestUserJoinEvent(CreateEventJoinRequest) returns (CreateEventJoinResponse){};
+    rpc RequestUpdateEventStatus (EventStatusRequest) returns (EventStatusResponse){};
+}
